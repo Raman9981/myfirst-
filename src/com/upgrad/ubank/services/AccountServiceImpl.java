@@ -14,7 +14,7 @@ public class AccountServiceImpl implements AccountService {
     //NEW CREATED
     private TransactionService transactionService;
 
-    public AccountServiceImpl() {
+    public AccountServiceImpl(TransactionService transactionService) {
         accounts = new Account[100];
         counter = 0;
     }
@@ -99,8 +99,5 @@ public class AccountServiceImpl implements AccountService {
         return account;
     }
 
-    public static void main(String[] args) {
-        TransactionService transactionService = new TransactionServiceImpl();
 
-    }
 }
